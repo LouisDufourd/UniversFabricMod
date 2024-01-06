@@ -28,7 +28,7 @@ public class ModItemGroups {
                 registerItemGroup(
                         "scrolls",
                         Text.translatable("itemGroup.scrolls"),
-                        getItemModStack("scroll")
+                        getItemModStack("blank_scroll")
                 )
         );
     }

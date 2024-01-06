@@ -1,7 +1,11 @@
 {
   "item.univers.blank_scroll": "Blank Scroll",
+  "item.univers.platinum_ingot": "Platinum Ingot",
+  "item.univers.raw_platinum": "Raw Platinum",
 
-  "block.univers.platinum_ore": "Platinum ore",
+  "block.univers.platinum_ore": "Platinum Ore",
+  "block.univers.platinum_block": "Platinum Block",
+  "block.univers.raw_platinum_block": "Raw Platinum Block",
 
   "itemGroup.scrolls": "Scrolls"
 }

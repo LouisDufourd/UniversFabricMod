@@ -38,19 +38,15 @@ public class ModBlocks {
         }
     }
 
+    private static void registerBlocks() {
+        UNIVERS_MOD_BLOCKS.put("platinum_ore", new Pair<>(List.of("NATURAL"), registerBlock("platinum_ore", new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE)))));
+        UNIVERS_MOD_BLOCKS.put("platinum_block", new Pair<>(List.of("BUILDING_BLOCKS"), registerBlock("platinum_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(DyeColor.GRAY)))));
+        UNIVERS_MOD_BLOCKS.put("raw_platinum_block", new Pair<>(List.of("NATURAL"), registerBlock("raw_platinum_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).mapColor(DyeColor.GRAY)))));
+    }
+
     public static void registerModBlocks() {
         Univers.LOGGER.info("Registering ModBlocks for %s".formatted(Univers.MOD_ID));
-        UNIVERS_MOD_BLOCKS.put(
-                "platinum_ore",
-                new Pair<>(
-                        List.of("NATURAL"),
-                        registerBlock(
-                                "platinum_ore",
-                                new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(DyeColor.GRAY))
-                        )
-                )
-        );
-
+        registerBlocks();
         addItemsGroup();
     }
 }

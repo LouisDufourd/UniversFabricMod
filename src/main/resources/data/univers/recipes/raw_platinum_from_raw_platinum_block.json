@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "univers:raw_platinum_block"
+    }
+  ],
+  "result": {
+    "item": "univers:raw_platinum",
+    "count": 9
+  }
+}

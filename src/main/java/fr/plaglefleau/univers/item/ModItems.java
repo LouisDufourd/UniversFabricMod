@@ -29,10 +29,15 @@ public class ModItems {
             ItemGroupsUtils.addItemInGroup(itemInfo.getLeft(), itemInfo.getRight());
         }
     }
+    private static void registerItems() {
+        UNIVERS_MOD_ITEMS.put("blank_scroll", new Pair<>(List.of("COMBAT", "scrolls"),registerItem("blank_scroll", new Item(new FabricItemSettings()))));
+        UNIVERS_MOD_ITEMS.put("platinum_ingot", new Pair<>(List.of("INGREDIENTS"),registerItem("platinum_ingot", new Item(new FabricItemSettings()))));
+        UNIVERS_MOD_ITEMS.put("raw_platinum", new Pair<>(List.of("INGREDIENTS"),registerItem("raw_platinum", new Item(new FabricItemSettings()))));
+    }
 
     public static void registerModItems() {
         Univers.LOGGER.info("Registering Mod Items for %s".formatted(Univers.MOD_ID));
-        UNIVERS_MOD_ITEMS.put("scroll", new Pair<>(List.of("COMBAT", "scrolls"),registerItem("blank_scroll", new Item(new FabricItemSettings()))));
+        registerItems();
         addItemsGroup();
     }
 }
