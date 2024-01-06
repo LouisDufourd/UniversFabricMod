@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "univers",
+  "version": "${version}",
+  "name": "Univers",
+  "description": "",
+  "authors": [
+    "PlagLeFléau"
+  ],
+  "contact": {
+    "repo": "https://github.com/LouisDufourd/UniversFabricMod"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/univers/icon.jpg",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "fr.plaglefleau.univers.client.UniversClient"
+    ],
+    "main": [
+      "fr.plaglefleau.univers.Univers"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
