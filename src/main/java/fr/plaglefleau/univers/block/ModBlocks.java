@@ -43,12 +43,14 @@ public class ModBlocks {
         UNIVERS_MOD_BLOCKS.put(
                 "platinum_ore",
                 new Pair<>(
-                        List.of("BUILDING_BLOCK"),
+                        List.of("NATURAL"),
                         registerBlock(
                                 "platinum_ore",
                                 new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(DyeColor.GRAY))
                         )
                 )
         );
+
+        addItemsGroup();
     }
 }

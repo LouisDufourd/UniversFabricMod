@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "models": "univers:block/platinum_ore"
+      "model": "univers:block/platinum_ore"
     }
   }
 }
