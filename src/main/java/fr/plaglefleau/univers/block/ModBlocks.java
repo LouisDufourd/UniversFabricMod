@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -13,6 +14,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import java.util.HashMap;
 import java.util.List;
@@ -39,7 +41,8 @@ public class ModBlocks {
     }
 
     private static void registerBlocks() {
-        UNIVERS_MOD_BLOCKS.put("platinum_ore", new Pair<>(List.of("NATURAL"), registerBlock("platinum_ore", new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE)))));
+        UNIVERS_MOD_BLOCKS.put("platinum_ore",new Pair<>(List.of("NATURAL"),registerBlock("platinum_ore",new ExperienceDroppingBlock(UniformIntProvider.create(0,0),FabricBlockSettings.copyOf(Blocks.STONE)))));
+        UNIVERS_MOD_BLOCKS.put("deepslate_platinum_ore",new Pair<>(List.of("NATURAL"),registerBlock("deepslate_platinum_ore",new ExperienceDroppingBlock(UniformIntProvider.create(0,0),FabricBlockSettings.copyOf(Blocks.DEEPSLATE)))));
         UNIVERS_MOD_BLOCKS.put("platinum_block", new Pair<>(List.of("BUILDING_BLOCKS"), registerBlock("platinum_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(DyeColor.GRAY)))));
         UNIVERS_MOD_BLOCKS.put("raw_platinum_block", new Pair<>(List.of("NATURAL"), registerBlock("raw_platinum_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).mapColor(DyeColor.GRAY)))));
     }
