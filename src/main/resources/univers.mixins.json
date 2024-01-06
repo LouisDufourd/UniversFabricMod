@@ -1,0 +1,6 @@
+{
+  "package": "fr.plaglefleau.univers.mixin",
+  "mixins": [
+    "UniversMixin"
+  ]
+}

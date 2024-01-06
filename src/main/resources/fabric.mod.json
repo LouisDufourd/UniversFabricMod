@@ -10,17 +10,23 @@
   "contact": {
     "repo": "https://github.com/LouisDufourd/UniversFabricMod"
   },
-  "license": "All-Rights-Reserved",
+  "license": "MIT",
   "icon": "assets/univers/icon.jpg",
   "environment": "client",
   "entrypoints": {
-    "client": [
-      "fr.plaglefleau.univers.client.UniversClient"
-    ],
     "main": [
       "fr.plaglefleau.univers.Univers"
+    ],
+    "client": [
+      "fr.plaglefleau.univers.UniversClient"
+    ],
+    "fabric-datagen": [
+      "fr.plaglefleau.univers.UniversDataGenerator"
     ]
   },
+  "mixins": [
+    "univers.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
