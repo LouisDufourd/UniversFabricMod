@@ -1,6 +1,7 @@
 package fr.plaglefleau.univers.item.custom.scrolls;
 
 import fr.plaglefleau.univers.Univers;
+import fr.plaglefleau.univers.item.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -34,6 +35,7 @@ public class SpeedScrollItem extends Item {
             scheduledExecutorService.schedule(() -> {
                 user.getAbilities().setWalkSpeed(userSpeed);
             }, 5, TimeUnit.MINUTES);
+            user.setStackInHand(hand, new ItemStack(ModItems.UNIVERS_MOD_ITEMS.get("blank_scroll").getRight()));
         }
         return super.use(world, user, hand);
     }

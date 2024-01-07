@@ -1,6 +1,7 @@
 package fr.plaglefleau.univers.item.custom.scrolls;
 
 import fr.plaglefleau.univers.Univers;
+import fr.plaglefleau.univers.item.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -34,7 +35,8 @@ public class FlyScrollItem extends Item {
             scheduledExecutorService.schedule(() -> {
                 user.getAbilities().allowFlying = false;
                 user.getAbilities().flying = false;
-            }, 5, TimeUnit.MINUTES);
+            }, 60, TimeUnit.SECONDS);
+            user.setStackInHand(hand, new ItemStack(ModItems.UNIVERS_MOD_ITEMS.get("blank_scroll").getRight()));
         }
         return super.use(world, user, hand);
     }
