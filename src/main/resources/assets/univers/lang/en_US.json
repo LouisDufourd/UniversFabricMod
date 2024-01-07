@@ -5,11 +5,17 @@
   "item.univers.speed_scroll": "Speed Scroll",
   "item.univers.platinum_ingot": "Platinum Ingot",
   "item.univers.raw_platinum": "Raw Platinum",
+  "item.univers.water_gem": "Water Gem",
+  "item.univers.fire_gem": "Fire Gem",
+  "item.univers.earth_gem": "Earth Gem",
+  "item.univers.air_gem": "Air Gem",
+  "item.univers.holy_gem": "Holy Gem",
 
   "block.univers.platinum_ore": "Platinum Ore",
   "block.univers.deepslate_platinum_ore": "Deepslate Platinum Ore",
   "block.univers.platinum_block": "Platinum Block",
   "block.univers.raw_platinum_block": "Raw Platinum Block",
 
-  "itemGroup.scrolls": "Scrolls"
+  "itemGroup.univers.scrolls": "Scrolls",
+  "itemGroup.univers.magics": "Magics"
 }

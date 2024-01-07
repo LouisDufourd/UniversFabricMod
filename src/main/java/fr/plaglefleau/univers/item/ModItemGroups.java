@@ -27,8 +27,16 @@ public class ModItemGroups {
                 "SCROLLS",
                 registerItemGroup(
                         "scrolls",
-                        Text.translatable("itemGroup.scrolls"),
+                        Text.translatable("itemGroup.univers.scrolls"),
                         getItemModStack("blank_scroll")
+                )
+        );
+        UNIVERS_MOD_ITEM_GROUPS.put(
+                "MAGICS",
+                registerItemGroup(
+                        "magics",
+                        Text.translatable("itemGroup.univers.magics"),
+                        getItemModStack("water_gem")
                 )
         );
     }
