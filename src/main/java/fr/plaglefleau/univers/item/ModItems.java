@@ -1,11 +1,11 @@
 package fr.plaglefleau.univers.item;
 
 import fr.plaglefleau.univers.Univers;
-import fr.plaglefleau.univers.utils.ItemGroupsUtils;
+import fr.plaglefleau.univers.item.custom.scrolls.FlyScrollItem;
+import fr.plaglefleau.univers.item.custom.scrolls.SpeedScrollItem;
+import fr.plaglefleau.univers.utils.Utils;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -26,13 +26,15 @@ public class ModItems {
     private static void addItemsGroup() {
         for (Map.Entry<String, Pair<List<String>, Item>> entry : UNIVERS_MOD_ITEMS.entrySet()) {
             Pair<List<String>, Item> itemInfo = entry.getValue();
-            ItemGroupsUtils.addItemInGroup(itemInfo.getLeft(), itemInfo.getRight());
+            Utils.addItemInGroup(itemInfo.getLeft(), itemInfo.getRight());
         }
     }
     private static void registerItems() {
         UNIVERS_MOD_ITEMS.put("blank_scroll", new Pair<>(List.of("COMBAT", "scrolls"),registerItem("blank_scroll", new Item(new FabricItemSettings()))));
         UNIVERS_MOD_ITEMS.put("platinum_ingot", new Pair<>(List.of("INGREDIENTS"),registerItem("platinum_ingot", new Item(new FabricItemSettings()))));
         UNIVERS_MOD_ITEMS.put("raw_platinum", new Pair<>(List.of("INGREDIENTS"),registerItem("raw_platinum", new Item(new FabricItemSettings()))));
+        UNIVERS_MOD_ITEMS.put("speed_scroll",new Pair<>(List.of("COMBAT", "scrolls"), registerItem("speed_scroll", new SpeedScrollItem(new FabricItemSettings()))));
+        UNIVERS_MOD_ITEMS.put("fly_scroll",new Pair<>(List.of("COMBAT", "scrolls"), registerItem("fly_scroll", new FlyScrollItem(new FabricItemSettings()))));
     }
 
     public static void registerModItems() {

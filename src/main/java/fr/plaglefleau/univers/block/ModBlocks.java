@@ -1,7 +1,7 @@
 package fr.plaglefleau.univers.block;
 
 import fr.plaglefleau.univers.Univers;
-import fr.plaglefleau.univers.utils.ItemGroupsUtils;
+import fr.plaglefleau.univers.utils.Utils;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -36,7 +36,7 @@ public class ModBlocks {
     private static void addItemsGroup() {
         for (Map.Entry<String, Pair<List<String>, Block>> entry : UNIVERS_MOD_BLOCKS.entrySet()) {
             Pair<List<String>, Block> blockInfo = entry.getValue();
-            ItemGroupsUtils.addItemInGroup(blockInfo.getLeft(), blockInfo.getRight());
+            Utils.addItemInGroup(blockInfo.getLeft(), blockInfo.getRight());
         }
     }
 

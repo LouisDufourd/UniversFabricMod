@@ -3,12 +3,11 @@ package fr.plaglefleau.univers.utils;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroups;
-import net.minecraft.util.Pair;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class ItemGroupsUtils {
+public class Utils {
     public static <T extends ItemConvertible> void addItemInGroup(@NotNull List<String> itemGroups, T item) {
         for (String itemGroup: itemGroups) {
             switch (itemGroup) {
@@ -28,5 +27,21 @@ public class ItemGroupsUtils {
                 case "TOOLS" -> ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.add(item));
             }
         }
+    }
+
+    public static int secondToTicks(int second) {
+        return second * 20;
+    }
+
+    public static int minuteToTicks(int minute) {
+        return minute * 60 * 20;
+    }
+
+    public static int hourToTicks(int minute) {
+        return minute * 60 * 60 * 20;
+    }
+
+    public static int millisecondToTicks(int millisecond) {
+        return (millisecond / 1000) * 20;
     }
 }
