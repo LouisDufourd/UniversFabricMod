@@ -1,35 +1,40 @@
 {
-  "schemaVersion": 1,
-  "id": "univers",
-  "version": "${version}",
-  "name": "Univers",
-  "description": "",
-  "authors": [
-    "PlagLeFléau"
-  ],
-  "contact": {
-    "repo": "https://github.com/LouisDufourd/UniversFabricMod"
-  },
-  "license": "MIT",
-  "icon": "assets/univers/icon.jpg",
-  "environment": "client",
-  "entrypoints": {
-    "main": [
-      "fr.plaglefleau.univers.Univers"
-    ],
-    "client": [
-      "fr.plaglefleau.univers.UniversClient"
-    ],
-    "fabric-datagen": [
-      "fr.plaglefleau.univers.UniversDataGenerator"
-    ]
-  },
-  "mixins": [
-    "univers.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=${loader_version}",
-    "fabric": "*",
-    "minecraft": "${minecraft_version}"
-  }
+	"schemaVersion": 1,
+	"id": "univers",
+	"version": "${version}",
+	"name": "Univers",
+	"description": "",
+	"authors": [
+		"PlagLeFléau"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/LouisDufourd/UniversFabricMod"
+	},
+	"license": "MIT",
+	"icon": "assets/univers/icon.jpg",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"fr.plaglefleau.univers.UniversClient"
+		],
+		"main": [
+			"fr.plaglefleau.univers.Univers"
+		],
+		"fabric-datagen": [
+			"fr.plaglefleau.univers.UniversDataGenerator"
+		]
+	},
+	"mixins": [
+		"univers.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
 }

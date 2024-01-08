@@ -9,20 +9,18 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Pair;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class ModBlocks {
-
-    public static final Map<String, Pair<List<String>, Block>> UNIVERS_MOD_BLOCKS = new HashMap<>();
+    public static final Block PLATINUM_ORE = registerBlock("platinum_ore",new ExperienceDroppingBlock(UniformIntProvider.create(0,0),FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block DEEPSLATE_PLATINUM_ORE = registerBlock("deepslate_platinum_ore",new ExperienceDroppingBlock(UniformIntProvider.create(0,0),FabricBlockSettings.copyOf(Blocks.DEEPSLATE)));
+    public static final Block RAW_PLATINUM_BLOCK = registerBlock("raw_platinum_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).mapColor(DyeColor.GRAY)));
+    public static final Block PLATINUM_BLOCK = registerBlock("platinum_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(DyeColor.GRAY)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -34,22 +32,14 @@ public class ModBlocks {
     }
 
     private static void addItemsGroup() {
-        for (Map.Entry<String, Pair<List<String>, Block>> entry : UNIVERS_MOD_BLOCKS.entrySet()) {
-            Pair<List<String>, Block> blockInfo = entry.getValue();
-            Utils.addItemInGroup(blockInfo.getLeft(), blockInfo.getRight());
-        }
-    }
-
-    private static void registerBlocks() {
-        UNIVERS_MOD_BLOCKS.put("platinum_ore",new Pair<>(List.of("NATURAL"),registerBlock("platinum_ore",new ExperienceDroppingBlock(UniformIntProvider.create(0,0),FabricBlockSettings.copyOf(Blocks.STONE)))));
-        UNIVERS_MOD_BLOCKS.put("deepslate_platinum_ore",new Pair<>(List.of("NATURAL"),registerBlock("deepslate_platinum_ore",new ExperienceDroppingBlock(UniformIntProvider.create(0,0),FabricBlockSettings.copyOf(Blocks.DEEPSLATE)))));
-        UNIVERS_MOD_BLOCKS.put("platinum_block", new Pair<>(List.of("BUILDING_BLOCKS"), registerBlock("platinum_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(DyeColor.GRAY)))));
-        UNIVERS_MOD_BLOCKS.put("raw_platinum_block", new Pair<>(List.of("NATURAL"), registerBlock("raw_platinum_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).mapColor(DyeColor.GRAY)))));
+        Utils.addItemToGroup(ItemGroups.NATURAL, PLATINUM_ORE);
+        Utils.addItemToGroup(ItemGroups.NATURAL, DEEPSLATE_PLATINUM_ORE);
+        Utils.addItemToGroup(ItemGroups.NATURAL, RAW_PLATINUM_BLOCK);
+        Utils.addItemToGroup(ItemGroups.BUILDING_BLOCKS, PLATINUM_BLOCK);
     }
 
     public static void registerModBlocks() {
         Univers.LOGGER.info("Registering ModBlocks for %s".formatted(Univers.MOD_ID));
-        registerBlocks();
         addItemsGroup();
     }
 }

@@ -35,7 +35,7 @@ public class SpeedScrollItem extends Item {
             scheduledExecutorService.schedule(() -> {
                 user.getAbilities().setWalkSpeed(userSpeed);
             }, 5, TimeUnit.MINUTES);
-            user.setStackInHand(hand, new ItemStack(ModItems.UNIVERS_MOD_ITEMS.get("blank_scroll").getRight()));
+            user.setStackInHand(hand, new ItemStack(ModItems.BLANK_SCROLLS));
         }
         return super.use(world, user, hand);
     }

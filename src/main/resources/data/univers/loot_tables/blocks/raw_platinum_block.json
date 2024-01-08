@@ -14,8 +14,7 @@
           "name": "univers:raw_platinum_block"
         }
       ],
-      "rolls": 1
+      "rolls": 1.0
     }
-  ],
-  "random_sequence": "univers:blocks/raw_platinum_block"
+  ]
 }

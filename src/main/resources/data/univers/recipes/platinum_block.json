@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "key": {
+    "#": {
+      "item": "univers:platinum_ingot"
+    }
+  },
   "pattern": [
     "###",
     "###",
     "###"
   ],
-  "key": {
-    "#" : {
-      "item": "univers:platinum_ingot"
-    }
-  },
   "result": {
     "item": "univers:platinum_block"
   }

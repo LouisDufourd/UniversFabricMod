@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "univers:platinum_block",
-    "univers:raw_platinum_block",
     "univers:platinum_ore",
-    "univers:deepslate_platinum_ore"
+    "univers:deepslate_platinum_ore",
+    "univers:raw_platinum_block",
+    "univers:platinum_block"
   ]
 }

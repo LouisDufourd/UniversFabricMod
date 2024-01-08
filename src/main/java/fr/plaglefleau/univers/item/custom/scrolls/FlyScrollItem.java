@@ -36,7 +36,7 @@ public class FlyScrollItem extends Item {
                 user.getAbilities().allowFlying = false;
                 user.getAbilities().flying = false;
             }, 60, TimeUnit.SECONDS);
-            user.setStackInHand(hand, new ItemStack(ModItems.UNIVERS_MOD_ITEMS.get("blank_scroll").getRight()));
+            user.setStackInHand(hand, new ItemStack(ModItems.BLANK_SCROLLS));
         }
         return super.use(world, user, hand);
     }
