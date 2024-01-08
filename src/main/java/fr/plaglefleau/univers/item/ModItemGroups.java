@@ -28,7 +28,7 @@ public class ModItemGroups {
     public static final ItemGroup MAGICS = registerItemGroup(
             "magics",
             Text.translatable("itemGroup.univers.magics"),
-            getItemStack(ModItems.WATER_GEM)
+            getItemStack(ModItems.WATER_STAFF)
     );
 
     private static @Nullable ItemGroup registerItemGroup(@NotNull String itemGroupId, MutableText title, ItemStack icon) {
@@ -83,5 +83,11 @@ public class ModItemGroups {
         entries.add(getItemStack(ModItems.EARTH_GEM));
         entries.add(getItemStack(ModItems.AIR_GEM));
         entries.add(getItemStack(ModItems.HOLY_GEM));
+
+        entries.add(getItemStack(ModItems.FIRE_STAFF));
+        entries.add(getItemStack(ModItems.WATER_STAFF));
+        entries.add(getItemStack(ModItems.EARTH_STAFF));
+        entries.add(getItemStack(ModItems.AIR_STAFF));
+        entries.add(getItemStack(ModItems.HOLY_STAFF));
     }
 }

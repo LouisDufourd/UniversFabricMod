@@ -3,13 +3,21 @@
   "item.univers.written_scroll": "Written Scroll",
   "item.univers.fly_scroll": "Fly Scroll",
   "item.univers.speed_scroll": "Speed Scroll",
+
   "item.univers.platinum_ingot": "Platinum Ingot",
   "item.univers.raw_platinum": "Raw Platinum",
+
   "item.univers.water_gem": "Water Gem",
   "item.univers.fire_gem": "Fire Gem",
   "item.univers.earth_gem": "Earth Gem",
   "item.univers.air_gem": "Air Gem",
   "item.univers.holy_gem": "Holy Gem",
+
+  "item.univers.fire_staff": "Fire Staff",
+  "item.univers.water_staff": "Water Staff",
+  "item.univers.earth_staff": "Earth Staff",
+  "item.univers.air_staff": "Air Staff",
+  "item.univers.holy_staff": "Holy Staff",
 
   "block.univers.platinum_ore": "Platinum Ore",
   "block.univers.deepslate_platinum_ore": "Deepslate Platinum Ore",

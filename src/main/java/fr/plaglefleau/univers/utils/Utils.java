@@ -15,6 +15,10 @@ public class Utils {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
     }
 
+    public static <T extends ItemConvertible> void addItemToGroupAfter(RegistryKey<ItemGroup> group, @NotNull T item, @NotNull T afterItem) {
+        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.addAfter(afterItem,item));
+    }
+
     public static int secondToTicks(int second) {
         return second * 20;
     }

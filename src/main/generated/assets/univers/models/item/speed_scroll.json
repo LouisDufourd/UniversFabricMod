@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "univers:item/speed_scroll"
+    "layer0": "univers:item/written_scroll"
   }
 }

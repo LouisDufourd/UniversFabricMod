@@ -27,8 +27,9 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(@NotNull ItemModelGenerator itemModelGenerator) {
         //SCROLLS
         itemModelGenerator.register(ModItems.BLANK_SCROLLS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SPEED_SCROLLS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.FLY_SCROLLS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WRITTEN_SCROLLS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SPEED_SCROLLS, ModItems.WRITTEN_SCROLLS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FLY_SCROLLS, ModItems.WRITTEN_SCROLLS, Models.GENERATED);
 
         //GEMS
         itemModelGenerator.register(ModItems.WATER_GEM, Models.GENERATED);

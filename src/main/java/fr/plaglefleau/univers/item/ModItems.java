@@ -7,6 +7,7 @@ import fr.plaglefleau.univers.utils.Utils;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -15,22 +16,31 @@ import net.minecraft.util.Rarity;
 public class ModItems {
 
     public static final Item BLANK_SCROLLS = registerItem("blank_scroll", new Item(new FabricItemSettings()));
+    public static final Item WRITTEN_SCROLLS = registerItem("written_scroll",  new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item SPEED_SCROLLS = registerItem("speed_scroll",  new SpeedScrollItem(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item FLY_SCROLLS = registerItem("fly_scroll", new FlyScrollItem(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
+
     public static final Item PLATINUM_INGOT = registerItem("platinum_ingot", new Item(new FabricItemSettings()));
     public static final Item RAW_PLATINUM = registerItem("raw_platinum", new Item(new FabricItemSettings()));
-    public static final Item WATER_GEM = registerItem("water_gem", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
-    public static final Item FIRE_GEM = registerItem("fire_gem", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
-    public static final Item EARTH_GEM = registerItem("earth_gem", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
-    public static final Item AIR_GEM = registerItem("air_gem", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
-    public static final Item HOLY_GEM = registerItem("holy_gem", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+
+    public static final Item WATER_GEM = registerItem("water_gem", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+    public static final Item FIRE_GEM = registerItem("fire_gem", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+    public static final Item EARTH_GEM = registerItem("earth_gem", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+    public static final Item AIR_GEM = registerItem("air_gem", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+    public static final Item HOLY_GEM = registerItem("holy_gem", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+
+    public static final Item FIRE_STAFF = registerItem("fire_staff", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item WATER_STAFF = registerItem("water_staff", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item EARTH_STAFF = registerItem("earth_staff", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item AIR_STAFF = registerItem("air_staff", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final Item HOLY_STAFF = registerItem("holy_staff", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Univers.MOD_ID, name), item);
     }
     private static void addItemsToGroup() {
-        Utils.addItemToGroup(ItemGroups.INGREDIENTS, PLATINUM_INGOT);
-        Utils.addItemToGroup(ItemGroups.INGREDIENTS, RAW_PLATINUM);
+        Utils.addItemToGroupAfter(ItemGroups.INGREDIENTS, PLATINUM_INGOT, Items.GOLD_INGOT);
+        Utils.addItemToGroupAfter(ItemGroups.INGREDIENTS, RAW_PLATINUM, Items.RAW_GOLD);
     }
 
     public static void registerModItems() {
