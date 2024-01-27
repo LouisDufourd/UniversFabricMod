@@ -1,4 +1,4 @@
-// 1.20.4	2024-01-08T05:02:23.9251825	Univers/Recipes
+// 1.20.4	2024-01-27T04:39:03.0258221	Univers/Recipes
 2b2e4e36aff06b68bc88ebc313d60d3ec3ed7930 data\univers\advancements\recipes\misc\platinum_ingot_from_smelting_platinum_ore.json
 e460174dbd260e53b1dd99a523ace3801f952d3f data\univers\advancements\recipes\misc\platinum_ingot_from_smelting_deepslate_platinum_ore.json
 f6425493a8beca90c8ae079728d379070d9e665b data\univers\advancements\recipes\misc\raw_platinum_from_platinum_ingot.json
@@ -24,4 +24,6 @@ ade7a5cde8d300da31ce6b1446e2425fdcca9e89 data\univers\advancements\recipes\misc\
 d87fcf882203c9141ea9579732901e5359f6e563 data\univers\recipes\platinum_ingot.json
 f030f56a45063ea2793ea4e43c958d11ab50c68d data\univers\recipes\raw_platinum_from_platinum_ingot.json
 70dde54a23a0d4da8f9b72089541aeaf5b15d172 data\univers\recipes\platinum_block.json
+58196ec73aae3ec95dfe1392f46000257c626a1e data\univers\advancements\recipes\misc\platinum_stick_from_platinum_ingot.json
 ec55de8c1e93e081a1efd96bcbae59e629d178db data\univers\advancements\recipes\misc\platinum_ingot_from_smelting_raw_platinum.json
+ad15de009da409722788b5435789a77baee87094 data\univers\recipes\platinum_stick_from_platinum_ingot.json

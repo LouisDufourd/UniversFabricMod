@@ -1,6 +1,9 @@
 package fr.plaglefleau.univers.block;
 
 import fr.plaglefleau.univers.Univers;
+import fr.plaglefleau.univers.block.custom.ScrollWriterBlock;
+import fr.plaglefleau.univers.item.ModItemGroups;
+import fr.plaglefleau.univers.item.ModItems;
 import fr.plaglefleau.univers.utils.Utils;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -21,6 +24,7 @@ public class ModBlocks {
     public static final Block DEEPSLATE_PLATINUM_ORE = registerBlock("deepslate_platinum_ore",new ExperienceDroppingBlock(UniformIntProvider.create(0,0),FabricBlockSettings.copyOf(Blocks.DEEPSLATE)));
     public static final Block RAW_PLATINUM_BLOCK = registerBlock("raw_platinum_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).mapColor(DyeColor.GRAY)));
     public static final Block PLATINUM_BLOCK = registerBlock("platinum_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(DyeColor.GRAY)));
+    public static final Block SCROLL_WRITER = registerBlock("scroll_writer", new ScrollWriterBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque().mapColor(DyeColor.GRAY)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -32,14 +36,14 @@ public class ModBlocks {
     }
 
     private static void addItemsGroup() {
-        Utils.addItemToGroup(ItemGroups.NATURAL, PLATINUM_ORE);
-        Utils.addItemToGroup(ItemGroups.NATURAL, DEEPSLATE_PLATINUM_ORE);
-        Utils.addItemToGroup(ItemGroups.NATURAL, RAW_PLATINUM_BLOCK);
-        Utils.addItemToGroup(ItemGroups.BUILDING_BLOCKS, PLATINUM_BLOCK);
+        Utils.addItemToGroupAfter(ItemGroups.NATURAL, PLATINUM_ORE, Blocks.IRON_ORE);
+        Utils.addItemToGroupAfter(ItemGroups.NATURAL, DEEPSLATE_PLATINUM_ORE, Blocks.DEEPSLATE_IRON_ORE);
+        Utils.addItemToGroupAfter(ItemGroups.NATURAL, RAW_PLATINUM_BLOCK, Blocks.RAW_IRON_BLOCK);
+        Utils.addItemToGroupAfter(ItemGroups.BUILDING_BLOCKS, PLATINUM_BLOCK, Blocks.IRON_BLOCK);
     }
 
     public static void registerModBlocks() {
-        Univers.LOGGER.info("Registering ModBlocks for %s".formatted(Univers.MOD_ID));
+        Univers.LOGGER.info("Registering Blocks for %s".formatted(Univers.MOD_ID));
         addItemsGroup();
     }
 }

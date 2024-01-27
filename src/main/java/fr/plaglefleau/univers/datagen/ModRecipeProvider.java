@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -37,6 +38,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 ModBlocks.PLATINUM_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_PLATINUM, RecipeCategory.DECORATIONS,
                 ModBlocks.RAW_PLATINUM_BLOCK);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PLATINUM_STICK, 4)
+                .pattern("P")
+                .pattern("P")
+                .input('P', ModItems.PLATINUM_INGOT)
+                .criterion(hasItem(ModItems.PLATINUM_INGOT), conditionsFromItem(ModItems.PLATINUM_INGOT))
+                .offerTo(exporter, new Identifier("platinum_stick_from_platinum_ingot"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RAW_PLATINUM, 1)
                 .pattern("SSS")

@@ -6,6 +6,18 @@
 
   "item.univers.platinum_ingot": "Platinum Ingot",
   "item.univers.raw_platinum": "Raw Platinum",
+  "item.univers.platinum_stick": "Platinum Stick",
+
+  "item.univers.platinum_helmet": "Platinum Helmet",
+  "item.univers.platinum_chestplate": "Platinum Chestplate",
+  "item.univers.platinum_leggings": "Platinum Leggings",
+  "item.univers.platinum_boots": "Platinum Boots",
+
+  "item.univers.platinum_sword": "Platinum Sword",
+  "item.univers.platinum_shovel": "Platinum Shovel",
+  "item.univers.platinum_pickaxe": "Platinum Pickaxe",
+  "item.univers.platinum_hoe": "Platinum Hoe",
+  "item.univers.platinum_axe": "Platinum Axe",
 
   "item.univers.water_gem": "Water Gem",
   "item.univers.fire_gem": "Fire Gem",
@@ -25,5 +37,9 @@
   "block.univers.raw_platinum_block": "Raw Platinum Block",
 
   "itemGroup.univers.scrolls": "Scrolls",
-  "itemGroup.univers.magics": "Magics"
+  "itemGroup.univers.magics": "Magics",
+
+  "attribute.univers.fly": "Fly",
+
+  "effect.univers.fly_effect": "Fly"
 }

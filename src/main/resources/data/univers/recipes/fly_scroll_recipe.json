@@ -1,0 +1,18 @@
+{
+  "type": "univers:scroll_writer",
+  "ingredients": [
+    {
+      "item": "univers:magic_ink",
+      "count": 10
+    },
+    {
+      "item": "univers:blank_scroll"
+    },
+    {
+      "item": "minecraft:elytra"
+    }
+  ],
+  "output": {
+    "item": "univers:fly_scroll"
+  }
+}

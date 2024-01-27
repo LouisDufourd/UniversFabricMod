@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "univers:block/scroll_writer"
+    }
+  }
+}

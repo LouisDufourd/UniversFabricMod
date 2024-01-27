@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "univers:platinum_helmet",
+    "univers:platinum_chestplate",
+    "univers:platinum_leggings",
+    "univers:platinum_boots"
+  ]
+}

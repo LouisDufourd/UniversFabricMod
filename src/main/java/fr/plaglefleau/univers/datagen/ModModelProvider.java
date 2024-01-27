@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 import org.jetbrains.annotations.NotNull;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -21,6 +22,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_PLATINUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PLATINUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_PLATINUM_BLOCK);
+
+        blockStateModelGenerator.registerSimpleState(ModBlocks.SCROLL_WRITER);
     }
 
     @Override
@@ -31,15 +34,30 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SPEED_SCROLLS, ModItems.WRITTEN_SCROLLS, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLY_SCROLLS, ModItems.WRITTEN_SCROLLS, Models.GENERATED);
 
-        //GEMS
+        //MAGICS
+        itemModelGenerator.register(ModItems.MAGIC_INK, Models.GENERATED);
         itemModelGenerator.register(ModItems.WATER_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.FIRE_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.EARTH_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.AIR_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.HOLY_GEM, Models.GENERATED);
 
-        //Minerals
+        //MINERALS
         itemModelGenerator.register(ModItems.RAW_PLATINUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.PLATINUM_INGOT, Models.GENERATED);
+
+        //TOOLS
+        itemModelGenerator.register(ModItems.PLATINUM_STICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PLATINUM_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PLATINUM_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PLATINUM_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PLATINUM_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PLATINUM_HOE, Models.HANDHELD);
+
+        //ARMORS
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PLATINUM_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PLATINUM_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PLATINUM_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PLATINUM_BOOTS);
     }
 }
